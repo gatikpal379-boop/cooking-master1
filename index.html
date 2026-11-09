@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cooking Master</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>🍳 Cooking Master</h1>
+      <div id="stats">
+        🪙 <b id="coins">0</b> &nbsp;|&nbsp;
+        Order <b id="order">1</b>/5 &nbsp;|&nbsp;
+        🏆 Best <b id="best">0</b>
+      </div>
+    </header>
+
+    <section id="customer">
+      <div id="face">🧑</div>
+      <div id="bubble"></div>
+    </section>
+
+    <section id="recipe"></section>
+
+    <section id="pan"><div id="panFood">Pan is empty</div></section>
+    <div id="message"></div>
+
+    <section id="shelf"></section>
+
+    <section id="cookArea" class="hidden">
+      <div id="meter">
+        <div id="zone"></div>
+        <div id="heat"></div>
+      </div>
+      <button id="serveBtn">🍽️ Serve!</button>
+    </section>
+
+    <section id="nextArea" class="hidden">
+      <button id="nextBtn">Next customer ➡️</button>
+    </section>
+
+    <section id="endArea" class="hidden">
+      <h2 id="endTitle">Shift over!</h2>
+      <p id="endScore"></p>
+      <button id="againBtn">Play again 🔄</button>
+    </section>
+
+    <footer>
+      <button id="shopBtn">🛒 Upgrade pan (50 🪙) – Level <span id="panLevel">1</span></button>
+    </footer>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
