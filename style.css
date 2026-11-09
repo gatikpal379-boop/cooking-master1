@@ -1,0 +1,70 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(#ffd9a0, #ff9f6b);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+#app {
+  width: 100%;
+  max-width: 480px;
+  padding: 16px;
+  text-align: center;
+}
+
+h1 { margin: 0 0 6px; color: #4a2300; }
+#stats { background: #fff8; border-radius: 12px; padding: 8px; font-size: 18px; }
+
+.hidden { display: none !important; }
+
+#customer { display: flex; align-items: center; gap: 10px; margin: 14px 0 6px; }
+#face { font-size: 64px; animation: bounce 1.2s infinite; }
+#bubble {
+  flex: 1; background: white; border-radius: 16px; padding: 10px;
+  font-size: 18px; position: relative; text-align: left;
+}
+
+#recipe { font-size: 34px; margin: 6px 0; letter-spacing: 6px; }
+
+#pan {
+  background: #2b2b2b; border-radius: 50% / 30%;
+  padding: 18px 10px; margin: 8px 0; color: white;
+  min-height: 90px; display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 6px 0 #111;
+}
+#panFood { font-size: 40px; }
+#panFood.sizzle { animation: sizzle 0.25s infinite; }
+
+#message { min-height: 28px; font-weight: bold; color: #4a2300; margin: 6px 0; }
+
+#shelf { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin: 10px 0; }
+#shelf button {
+  font-size: 32px; padding: 8px 0; border: none; border-radius: 12px;
+  background: white; cursor: pointer; box-shadow: 0 4px 0 #c97b3d;
+  transition: transform 0.1s;
+}
+#shelf button:active { transform: translateY(4px); box-shadow: none; }
+#shelf button:disabled { opacity: 0.4; }
+
+#meter {
+  position: relative; height: 34px; background: #eee; border-radius: 20px;
+  overflow: hidden; margin: 10px 0; border: 3px solid #4a2300;
+}
+#zone { position: absolute; top: 0; bottom: 0; background: #5cd65c; opacity: 0.8; }
+#heat { position: absolute; top: 0; bottom: 0; left: 0; width: 0%; background: linear-gradient(90deg, #ffb300, #ff3d00); }
+
+button {
+  font-size: 18px; padding: 12px 20px; border: none; border-radius: 14px;
+  background: #ff5722; color: white; cursor: pointer; font-weight: bold;
+  box-shadow: 0 4px 0 #b53a12;
+}
+button:disabled { background: #aaa; box-shadow: none; cursor: not-allowed; }
+footer { margin-top: 18px; }
+footer button { background: #6a4bd6; box-shadow: 0 4px 0 #43308f; font-size: 15px; }
+
+@keyframes bounce { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+@keyframes sizzle { 0%,100% { transform: rotate(-3deg); } 50% { transform: rotate(3deg) scale(1.05); } }
